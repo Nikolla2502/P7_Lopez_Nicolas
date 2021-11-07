@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const userRoute = require('./routes/userRoute');
+
 // CORS : « Cross Origin Resource Sharing ».
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -11,7 +12,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
     });
-
+// connection mogoose
 mongoose.connect('mongodb+srv://nikolla2502:156029@cluster0.kuvdm.mongodb.net/P6Piiquante?retryWrites=true&w=majority',
      { useNewUrlParser: true, useUnifiedTopology: true }) 
     .then(() => console.log('Connexion à MongoDB réussie !')) 
