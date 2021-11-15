@@ -13,7 +13,7 @@ app.use((req, res, next) => {
     next();
     });
 // connection mogoose
-mongoose.connect('mongodb+srv://nikolla2502:156029@cluster0.kuvdm.mongodb.net/P6Piiquante?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://nikolla2502:156029@cluster0.kuvdm.mongodb.net/P7Groupomania?retryWrites=true&w=majority',
      { useNewUrlParser: true, useUnifiedTopology: true }) 
     .then(() => console.log('Connexion à MongoDB réussie !')) 
     .catch(() => console.log('Connexion à MongoDB échouée !'));
